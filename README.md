@@ -23,7 +23,7 @@ delete_zones  = [(500, 50, 600, 700)]
 
 ```bash
 pip install -r requirements.txt
-python Итогтраектория.py
+python trajectory_tracking.py
 ```
 
 - The script uses the default webcam (`cv2.VideoCapture(0)`). To process a video file instead, pass its path to `cv2.VideoCapture(...)`.
@@ -34,8 +34,8 @@ python Итогтраектория.py
 
 | File | Description |
 |---|---|
-| `Итогтраектория.py` | Final version of the tracker (recommended entry point) |
-| `traectorianaotpravku.py` | Earlier variant of the same pipeline |
+| `trajectory_tracking.py` | Final version of the tracker (recommended entry point) |
+| `trajectory_tracking_v1.py` | Earlier variant of the same pipeline |
 
 ## Tech stack
 
