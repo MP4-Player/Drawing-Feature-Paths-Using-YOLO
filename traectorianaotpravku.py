@@ -2,7 +2,6 @@ from ultralytics import YOLO
 import cv2
 import random
 
-# К БОЛЬШОМУ СОЖЕЛЕНИЮ Я УБИЛ ЯДРО ЮПИТЕРА Я ХЗ ЧТО ДЕЛАТЬ ПОЭТОМУ Я ВСЁ ПЕРЕНЕС СЮДА по хорошему это всё должно быть в ячейках но и так запускаеться
 model = YOLO('yolov8x.pt')
 trajectories = {}
 object_colors = {}

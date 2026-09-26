@@ -1,8 +1,6 @@
 from ultralytics import YOLO
 import cv2
-import random  
-
-# К БОЛЬШОМУ СОЖЕЛЕНИЮ Я УБИЛ ЯДРО ЮПИТЕРА Я ХЗ ЧТО ДЕЛАТЬ ПОЭТОМУ Я ВСЁ ПЕРЕНЕС СЮДА по хорошему это всё должно быть в ячейках но и так запускаеться
+import random
 
 
 model = YOLO('yolov8x.pt')
@@ -45,7 +43,7 @@ while cap.isOpened():
 
     # Визуализация результатов
     for result in results:
-        boxes = result.boxes.xyxy.cpu().numpy()  # координаты мистера  бокса
+        boxes = result.boxes.xyxy.cpu().numpy()  # координаты бокса
         ids = result.boxes.id.cpu().numpy() if result.boxes.id is not None else []  # ID объектов
         clss = result.boxes.cls.cpu().numpy() 
 
@@ -53,7 +51,7 @@ while cap.isOpened():
             x1, y1, x2, y2 = map(int, box)
             center_x, center_y = (x1 + x2) // 2, (y1 + y2) // 2 #рисуем от центра 
 
-            # эдем , рисуй!
+            # Генерация цвета для объекта
             if obj_id not in object_colors:
                 red = random.randint(0, 255)  
                 green = random.randint(0, 255) 
