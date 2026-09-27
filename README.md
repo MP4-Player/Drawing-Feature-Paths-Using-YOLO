@@ -1,5 +1,7 @@
 # Drawing Feature Paths Using YOLO
 
+> **Take-home test assignment for a job interview** (computer vision). The final solution is at the top level; the development history is in [`drafts/`](drafts).
+
 Real-time multi-object tracking with **YOLOv8 + BoT-SORT** that draws the movement path of each object once it enters a region of interest, and clears the path when the object reaches an exit zone.
 
 Typical use cases: monitoring how objects move through a specific area (a conveyor section, a doorway, a road lane) and visualising their trajectories live.
@@ -36,6 +38,17 @@ python trajectory_tracking.py
 |---|---|
 | `trajectory_tracking.py` | Final version of the tracker (recommended entry point) |
 | `trajectory_tracking_v1.py` | Earlier variant of the same pipeline |
+
+## Development process
+
+This was a take-home task for a job interview. [`drafts/`](drafts) keeps the intermediate versions:
+
+| Stage | Files | Idea |
+|---|---|---|
+| Tracking logic | `1.py`, `1.ipynb`, `praktik1.py` … `praktik8.py`, `practik3.py` … `practik9.py`, `nonpractik10.py` | Trigger and delete zones (including zones drawn with the mouse), ByteTrack vs BoT-SORT, trajectory drawing |
+| Desktop interface | `interfase-practik1.py` … `interfases-practik6.py`, `ITOG1nterfases-practik7.py`, `ITOG2nterfases-practik7.py` | PyQt5 application for choosing the video source and zones and watching the tracking |
+| GPU | `cuda.py`, `CUDAmoment.py`, `GPUmoment.py` | Checking CUDA availability and a GPU version of the interface |
+| Earlier final | `Итогтраектория.py` | Previous version of `trajectory_tracking.py` |
 
 ## Tech stack
 
